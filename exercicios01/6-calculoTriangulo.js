@@ -2,6 +2,16 @@
 
 const prompt = require("prompt-sync")();
 
-let ladoA = Number(prompt("Digite o valor do lado  A do Triangulo: "));
-let ladoA = Number(prompt("Digite o valor do lado  A do Triangulo: "));
-let ladoA = Number(prompt("Digite o valor do lado  A do Triangulo: "));
+let a = Number(prompt("Digite o valor do lado  A do Triangulo: "));
+let b = Number(prompt("Digite o valor do lado  A do Triangulo: "));
+let c = Number(prompt("Digite o valor do lado  A do Triangulo: "));
+
+if(a + b < c || a + c < b || b + c < a){
+    console.log("Não é um triangulo!")
+}else if((a == b && c != a) || (a == c && c != b) || (b == c && b != a)){
+    console.log("É um triângulo isósceles!");
+}else if(a != b && b != c){
+    console.log("É um triângulo escaleno!");
+}else if(a == b && b == c){
+    console.log("É um triângulo equilatero!")
+}

@@ -9,4 +9,7 @@ Thumbs.db
 *.log
 dist/
 build/
-exercicios01/package.json
+**/package.json
+/package.json
+/exercicios01/package.json
+/exercicios01/package-lock.json
