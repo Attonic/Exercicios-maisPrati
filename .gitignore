@@ -9,3 +9,4 @@ Thumbs.db
 *.log
 dist/
 build/
+exercicios01/package.json
