@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Index - Lista 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Bem-vindo ao Nosso Site</h1>
+        <p>Estamos felizes em compartilhar nossa missão e visão com você. Este é um projeto desenvolvido para demonstrar o uso de tags semânticas em HTML.</p>
+    </header>
+
+    <!-- Menu Hamburger (Exercício 7) -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="listas.html">Listas</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="galeria.html">Galeria</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Missão</h2>
+            <p class="destaque">Nossa missão é promover o conhecimento acessível a todos, através de tecnologias inovadoras e metodologias eficazes de ensino.</p>
+        </section>
+        
+        <section>
+            <h2>Visão</h2>
+            <p id="importante">Nossa visão é ser referência em educação digital de qualidade, transformando vidas através do aprendizado contínuo.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Todos os direitos reservados. Desenvolvido para exercícios de HTML e CSS.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            menu.classList.toggle('ativo');
+            hamburger.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('header');
+            if (header) {
+                header.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+       
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('section, .destaque, #importante');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Lista 3 - Exercícios Web Estilizados</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(255,255,255,0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .features {
+            text-align: left;
+            margin: 30px 0;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .features h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .features li:before {
+            content: "✨ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+        .demo-links {
+            margin: 30px 0;
+        }
+        .demo-links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border: 2px solid #667eea;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #667eea;
+            transition: all 0.3s ease;
+        }
+        .demo-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Lista 3 Estilizada</h1>
+        <p class="subtitle">Exercícios de Desenvolvimento Web com design moderno e responsivo</p>
+        
+        <div class="features">
+            <h3>✨ Melhorias Implementadas:</h3>
+            <ul>
+                <li>Design moderno com gradientes e glassmorphism</li>
+                <li>Animações suaves e efeitos de transição</li>
+                <li>Menu hamburger funcional para mobile</li>
+                <li>Galeria responsiva com Grid e Flexbox</li>
+                <li>Formulário estilizado com validação visual</li>
+                <li>Efeitos hover e micro-interações</li>
+                <li>Parallax suave no header</li>
+                <li>Scrollbar personalizada</li>
+                <li>Responsividade completa</li>
+                <li>Cores e tipografia cuidadosamente escolhidas</li>
+            </ul>
+        </div>
+
+        <div class="demo-links">
+            <h3>🔗 Páginas Disponíveis:</h3>
+            <a href="index.html">🏠 Início</a>
+            <a href="listas.html">📝 Listas</a>
+            <a href="feedback.html">💬 Feedback</a>
+            <a href="galeria.html">🖼️ Galeria</a>
+        </div>
+
+        <a href="index.html" class="btn">🚀 Ver Demonstração</a>
+        
+        <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+            💡 <strong>Dica:</strong> Teste a responsividade redimensionando a janela e veja o menu hamburger em dispositivos móveis!
+        </p>
+    </div>
+</body>
+</html>
